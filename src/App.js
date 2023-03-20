@@ -1,25 +1,29 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Likes from "./components/Likes";
+import store from "./redux/store";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+            <div className="wrap">
+                {/*<Spin />*/}
+                <div className="card">
+                    {/*{error && (*/}
+                    {/*    <div className='error-message'>*/}
+                    {/*        {error}*/}
+                    {/*    </div>*/}
+                    )}
+                    <div className="card-image">
+                        <img src="https://avatars.mds.yandex.net/i?id=6614baec7e5c07b6912281ade43d344182e24ad1-8076535-images-thumbs&n=13&exp=1" alt="surfing"/>
+                        {/*<Title />*/}
+                        <Likes store={store} />
+                    </div>
+                    {/*<Comments />*/}
+                </div>
+            </div>
+        </div>
+    );
 }
 
 export default App;
